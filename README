@@ -51,6 +51,5 @@ AUTHOR
 
 SEE ALSO
     the Apache::Singleton::Request manpage, the Apache::Singleton::Process
-    manpage, the Class::Singleton manpage, the Cache::SharedMemoryCache
-    manpage
+    manpage, the Class::Singleton manpage
 

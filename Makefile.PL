@@ -5,6 +5,5 @@ WriteMakefile(
     'PREREQ_PM' => {
 	Test::More => 0.32,
 	mod_perl => 0,
-	Cache::Cache => 0.99,
     },
 );
