@@ -1,5 +1,5 @@
 use strict;
-use Test::More tests => 2;
+use Test::More tests => 1;
 
 $ENV{MOD_PERL} = 1;
 $INC{'Apache.pm'} = 1;		# dummy
@@ -10,9 +10,11 @@ sub request {
 }
 
 package Mock::Apache;
-sub register_cleanup {
-    my($self, $code) = @_;
-    ::is ref($code), 'CODE';
+my %pnotes;
+sub pnotes {
+    my($self, $key, $val) = @_;
+    $pnotes{$key} = $val if $val;
+    return $pnotes{$key};
 }
 
 package Printer;
