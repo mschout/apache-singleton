@@ -1,5 +1,9 @@
 Revision history for Perl extension Apache::Singleton.
 
+0.03  Sat Dec 22 22:29:50 JST 2001
+	- Added test for multiple classes
+	* Added Request, Process, Server subclasses
+
 0.02  Sat Dec 22 16:58:34 JST 2001
 	- use pnotes instead of register_cleanup
 	  (Thanks to Perrin Harkins <perrin@elem.com>)

@@ -3,5 +3,13 @@ MANIFEST
 Makefile.PL
 README
 lib/Apache/Singleton.pm
+lib/Apache/Singleton/Process.pm
+lib/Apache/Singleton/Request.pm
+lib/Apache/Singleton/Server.pm
 t/00_compile.t
 t/01_singleton.t
+t/02_multiclass.t
+t/03_request.t
+t/04_process.t
+t/05_server.t
+t/server.pl

@@ -5,17 +5,53 @@ SYNOPSIS
       package Printer;
       use base qw(Apache::Singleton);
 
-      # just the same as Class::Singleton
+      # same: default is per Request
+      package Printer::PerRequest;
+      use base qw(Apache::Singleton::Request);
+
+      package Printer::PerProcess;
+      use base qw(Apache::Singleton::Process);
+
+      package Printer::PerServer;
+      use base qw(Apache::Singleton::Server);
 
 DESCRIPTION
-    Apache::Singleton works the same as Class::Singleton, but clears the
-    singleton out on each request.
+    Apache::Singleton works the same as Class::Singleton, but with various
+    object lifetime (scope). See the Class::Singleton manpage first.
 
-    This module checks $ENV{MOD_PERL}, so it just works well in non-mod_perl
-    environment.
+OBJECT LIFETIME
+    By iniheriting one of the following sublasses of Apache::Singleton, you
+    can change the scope of your object.
+
+    Request
+          use base qw(Apache::Singleton::Request);
+
+        One instance for one request. Apache::Singleton will remove
+        intstance on each request. Implemented using mod_perl "pnotes" API.
+        This is the default scope, so inheriting from Apache::Singleton
+        would do the same effect.
+
+    Process
+          use base qw(Apache::Singleton::Process);
+
+        One instance for one httpd process. Implemented using package
+        global. Notice this is the same beaviour with Class::Singleton ;)
+
+    Server
+          use base qw(Apache::Singleton::Server);
+
+        One instance for one server (across all httpd processes).
+        Implemented using Cache::SharedMemoryCache (IPC).
+
+        Note that multiple process cannot share blessed reference without
+        serialization, so *One instance for one server* is just an idea.
+        What it means is, one instance for one process, and multiple
+        instances with shared data across one server. See t/05_server.t in
+        this module distribution for what it exactly means.
 
 AUTHOR
-    Original idea by Matt Sergeant <matt@sergeant.org>.
+    Original idea by Matt Sergeant <matt@sergeant.org> and Perrin Harkins
+    <perrin@elem.com>.
 
     Code by Tatsuhiko Miyagawa <miyagawa@bulknews.net>
 
@@ -23,5 +59,7 @@ AUTHOR
     under the same terms as Perl itself.
 
 SEE ALSO
-    the Class::Singleton manpage
+    the Apache::Singleton::Request manpage, the Apache::Singleton::Process
+    manpage, the Apache::Singleton::Server manpage, the Class::Singleton
+    manpage, the Cache::SharedMemoryCache manpage
 
