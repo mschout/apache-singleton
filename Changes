@@ -1,7 +1,9 @@
 Revision history for Perl extension Apache::Singleton.
 
-0.06
+0.06  Tue Oct 19 17:29:05 JST 2004
 	- removed dependency on Cache::Cache in Makefile.PL
+	* Added mod_perl2 support
+	  Thanks to Frank Wiles <frank@wiles.org>
 
 0.05  Tue Dec 25 05:59:55 JST 2001
 	- Compatibility: defaults to Process in non-mod_perl environment

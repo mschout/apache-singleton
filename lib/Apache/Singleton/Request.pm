@@ -2,12 +2,22 @@ package Apache::Singleton::Request;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.01';
+$VERSION = '0.06';
 
 use Apache::Singleton;
 use base qw(Apache::Singleton);
 
-use Apache;
+BEGIN { 
+	use constant MP2 => eval { require mod_perl; $mod_perl::VERSION > 1.99 };
+	die "mod_perl is required to run this module: $@" if $@;
+
+	if (MP2) { 
+		require Apache::RequestUtil; 
+	}
+	else { 
+		require Apache;
+	}
+}
 
 sub _get_instance {
     my $class = shift;
