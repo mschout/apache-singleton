@@ -5,4 +5,3 @@ README
 lib/Apache/Singleton.pm
 t/00_compile.t
 t/01_singleton.t
-t/02_non_modperl.t

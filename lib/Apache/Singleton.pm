@@ -2,24 +2,23 @@ package Apache::Singleton;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.01';
+$VERSION = '0.02';
+
+use Apache;
 
 sub instance {
     my $class = shift;
 
-    # get a reference to the _instance variable in the $class package
-    no strict 'refs';
-    my $instance = "$class\::_instance";
+    my $r = Apache->request;
+    my $key = "apache_singleton_$class";
+    my $instance = $r->pnotes($key);
 
-    unless (defined $$instance) {
-	$$instance = $class->_new_instance(@_);
-	if ($ENV{MOD_PERL}) {
-	    require Apache;
-	    Apache->request->register_cleanup(sub { undef $$instance });
-	}
+    unless (defined $instance) {
+	$instance = $class->_new_instance(@_);
+	$r->pnotes($key => $instance);
     }
 
-    return $$instance;
+    return $instance;
 }
 
 sub _new_instance {
@@ -45,12 +44,10 @@ Apache::Singleton - Singleton class for mod_perl
 Apache::Singleton works the same as Class::Singleton, but clears the
 singleton out on each request.
 
-This module checks C<$ENV{MOD_PERL}>, so it just works well in
-non-mod_perl environment.
-
 =head1 AUTHOR
 
-Original idea by Matt Sergeant E<lt>matt@sergeant.orgE<gt>.
+Original idea by Matt Sergeant E<lt>matt@sergeant.orgE<gt> and Perrin
+Harkins E<lt>perrin@elem.comE<gt>.
 
 Code by Tatsuhiko Miyagawa E<lt>miyagawa@bulknews.netE<gt>
 
