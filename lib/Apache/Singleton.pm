@@ -2,7 +2,7 @@ package Apache::Singleton;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 require Apache::Singleton::Request;
 
@@ -51,9 +51,6 @@ Apache::Singleton - Singleton class for mod_perl
   package Printer::PerProcess;
   use base qw(Apache::Singleton::Process);
 
-  package Printer::PerServer;
-  use base qw(Apache::Singleton::Server);
-
 =head1 DESCRIPTION
 
 Apache::Singleton works the same as Class::Singleton, but with
@@ -61,7 +58,7 @@ various object lifetime (B<scope>). See L<Class::Singleton> first.
 
 =head1 OBJECT LIFETIME
 
-By iniheriting one of the following sublasses of Apache::Singleton,
+By inheriting one of the following sublasses of Apache::Singleton,
 you can change the scope of your object.
 
 =over 4
@@ -70,7 +67,7 @@ you can change the scope of your object.
 
   use base qw(Apache::Singleton::Request);
 
-One instance for one request. Apache::Singleton will remove intstance
+One instance for one request. Apache::Singleton will remove instance
 on each request. Implemented using mod_perl C<pnotes> API. This is the
 default scope, so inheriting from Apache::Singleton would do the same
 effect.
@@ -81,19 +78,6 @@ effect.
 
 One instance for one httpd process. Implemented using package
 global. Notice this is the same beaviour with Class::Singleton ;)
-
-=item Server
-
-  use base qw(Apache::Singleton::Server);
-
-One instance for one server (across all httpd processes). Implemented
-using Cache::SharedMemoryCache (IPC).
-
-Note that multiple process cannot share blessed reference without
-serialization, so I<One instance for one server> is just an idea. What
-it means is, one instance for one process, and multiple instances with
-shared data across one server. See B<t/05_server.t> in this module
-distribution for what it exactly means.
 
 =back
 
@@ -110,7 +94,6 @@ it under the same terms as Perl itself.
 =head1 SEE ALSO
 
 L<Apache::Singleton::Request>, L<Apache::Singleton::Process>,
-L<Apache::Singleton::Server>, L<Class::Singleton>,
-L<Cache::SharedMemoryCache>
+L<Class::Singleton>, L<Cache::SharedMemoryCache>
 
 =cut
