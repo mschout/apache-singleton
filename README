@@ -1,0 +1,27 @@
+NAME
+    Apache::Singleton - Singleton class for mod_perl
+
+SYNOPSIS
+      package Printer;
+      use base qw(Apache::Singleton);
+
+      # just the same as Class::Singleton
+
+DESCRIPTION
+    Apache::Singleton works the same as Class::Singleton, but clears the
+    singleton out on each request.
+
+    This module checks $ENV{MOD_PERL}, so it just works well in non-mod_perl
+    environment.
+
+AUTHOR
+    Original idea by Matt Sergeant <matt@sergeant.org>.
+
+    Code by Tatsuhiko Miyagawa <miyagawa@bulknews.net>
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+SEE ALSO
+    the Class::Singleton manpage
+
