@@ -3,9 +3,11 @@ NAME
 
 SYNOPSIS
       package Printer;
+      # default:
+      #   Request for mod_perl env
+      #   Process for non-mod_perl env
       use base qw(Apache::Singleton);
 
-      # same: default is per Request
       package Printer::PerRequest;
       use base qw(Apache::Singleton::Request);
 
@@ -24,21 +26,25 @@ OBJECT LIFETIME
           use base qw(Apache::Singleton::Request);
 
         One instance for one request. Apache::Singleton will remove instance
-        on each request. Implemented using mod_perl "pnotes" API. This is
-        the default scope, so inheriting from Apache::Singleton would do the
+        on each request. Implemented using mod_perl "pnotes" API. In
+        mod_perl environment (where $ENV{MOD_PERL} is defined), this is the
+        default scope, so inheriting from Apache::Singleton would do the
         same effect.
 
     Process
           use base qw(Apache::Singleton::Process);
 
         One instance for one httpd process. Implemented using package
-        global. Notice this is the same beaviour with Class::Singleton ;)
+        global. In non-mod_perl environment, this is the default scope, and
+        you may notice this is the same beaviour with Class::Singleton ;)
+
+        So you can use this module safely under non-mod_perl environment.
 
 AUTHOR
     Original idea by Matt Sergeant <matt@sergeant.org> and Perrin Harkins
     <perrin@elem.com>.
 
-    Code by Tatsuhiko Miyagawa <miyagawa@bulknews.net>
+    Code by Tatsuhiko Miyagawa <miyagawa@bulknews.net>.
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

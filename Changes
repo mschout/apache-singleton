@@ -1,5 +1,8 @@
 Revision history for Perl extension Apache::Singleton.
 
+0.05  Tue Dec 25 05:59:55 JST 2001
+	- Compatibility: defaults to Process in non-mod_perl environment
+
 0.04  Sun Dec 23 21:20:04 JST 2001
 	- Fixed docs
 	- pulled off Server subclass: it was completely broken
