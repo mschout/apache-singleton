@@ -2,7 +2,7 @@ package Apache::Singleton;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.05';
+$VERSION = '0.06';
 
 BEGIN {
     my $delegator = sprintf 'Apache::Singleton::%s',
@@ -106,6 +106,6 @@ it under the same terms as Perl itself.
 =head1 SEE ALSO
 
 L<Apache::Singleton::Request>, L<Apache::Singleton::Process>,
-L<Class::Singleton>, L<Cache::SharedMemoryCache>
+L<Class::Singleton>
 
 =cut
