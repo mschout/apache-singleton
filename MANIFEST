@@ -10,3 +10,4 @@ t/01_singleton.t
 t/02_multiclass.t
 t/03_request.t
 t/04_process.t
+META.yml                                 Module meta-data (added by MakeMaker)

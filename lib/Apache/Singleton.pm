@@ -2,7 +2,7 @@ package Apache::Singleton;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.06';
+$VERSION = '0.07';
 
 BEGIN {
     my $delegator = sprintf 'Apache::Singleton::%s',
