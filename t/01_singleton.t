@@ -1,8 +1,5 @@
 use strict;
-use Test::More tests => 1;
-
-$ENV{MOD_PERL} = 1;
-$INC{'Apache.pm'} = 1;		# dummy
+use Test::More tests => 2;
 
 package Apache;
 sub request {
@@ -21,11 +18,19 @@ package Printer;
 use base qw(Apache::Singleton);
 
 package main;
-my $printer_a = Printer->instance;
-my $printer_b = Printer->instance;
+{
+    local $ENV{MOD_PERL} = 1;
+    $INC{'Apache.pm'} = 1;		# dummy
 
-is "$printer_a", "$printer_b", 'same printer';
+    my $printer_a = Printer->instance;
+    my $printer_b = Printer->instance;
 
+    is "$printer_a", "$printer_b", 'same printer';
+}
 
+{
+    my $printer_a = Printer->instance;
+    my $printer_b = Printer->instance;
 
-
+    is "$printer_a", "$printer_b", 'same printer';
+}
