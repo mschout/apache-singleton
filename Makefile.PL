@@ -9,6 +9,10 @@ my %conf = (
     }
 );
 
+if (MM->can('signature_target')) {
+    $conf{SIGN} = 1;
+}
+
 if ($] >= 5.005) {
     $conf{ABSTRACT_FROM} = 'lib/Apache/Singleton.pm';
     $conf{AUTHOR}        = 'Michael Schout <mschout@cpan.org>';
