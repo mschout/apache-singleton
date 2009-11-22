@@ -12,6 +12,7 @@ t/02_multiclass.t
 t/03_request.t
 t/04_process.t
 t/05_request_mp2.t
+t/06_signature.t
 t/lib/Apache.pm
 t/lib/Apache2/RequestUtil.pm
 t/lib/Mock/Apache.pm

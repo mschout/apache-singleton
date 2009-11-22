@@ -7,6 +7,7 @@ CURRENT
     - update so mod_perl2 2.0 >= RC5 is supported
     - split out test mocks into t/lib
     - add mod_perl2 tests
+    - sign the dist, add signature test
 
 0.06  Tue Oct 19 17:29:05 JST 2004
     - removed dependency on Cache::Cache in Makefile.PL
