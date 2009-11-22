@@ -1,21 +1,8 @@
 use strict;
+use lib qw(t/lib lib);
 use Test::More tests => 3;
 
-$ENV{MOD_PERL} = 1;
-$INC{'Apache.pm'} = 1;		# dummy
-
-package Apache;
-sub request {
-    bless {}, 'Mock::Apache';
-}
-
-package Mock::Apache;
-my %pnotes;
-sub pnotes {
-    my($self, $key, $val) = @_;
-    $pnotes{$key} = $val if $val;
-    return $pnotes{$key};
-}
+use Mock::Apache;
 
 package Printer;
 use base qw(Apache::Singleton);
