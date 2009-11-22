@@ -1,8 +1,7 @@
 use strict;
+use lib qw(t/lib lib);
 use Test::More tests => 4;
-
-$ENV{MOD_PERL} = 1;
-$INC{'Apache.pm'} = 1;		# dummy
+use Mock::Apache;
 
 package Printer;
 use base qw(Apache::Singleton::Process);
