@@ -4,6 +4,7 @@ CURRENT
     - new maintainer: Michael Schout <mschout@cpan.org>
     - updated Makefile.PL
     - added META_MERGE to Makefile.PL
+    - update so mod_perl2 2.0 >= RC5 is supported
 
 0.06  Tue Oct 19 17:29:05 JST 2004
     - removed dependency on Cache::Cache in Makefile.PL
