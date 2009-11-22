@@ -1,25 +1,30 @@
 Revision history for Perl extension Apache::Singleton.
 
+CURRENT
+    - new maintainer: Michael Schout <mschout@cpan.org>
+    - updated Makefile.PL
+    - added META_MERGE to Makefile.PL
+
 0.06  Tue Oct 19 17:29:05 JST 2004
-	- removed dependency on Cache::Cache in Makefile.PL
-	* Added mod_perl2 support
-	  Thanks to Frank Wiles <frank@wiles.org>
+    - removed dependency on Cache::Cache in Makefile.PL
+    * Added mod_perl2 support
+      Thanks to Frank Wiles <frank@wiles.org>
 
 0.05  Tue Dec 25 05:59:55 JST 2001
-	- Compatibility: defaults to Process in non-mod_perl environment
+    - Compatibility: defaults to Process in non-mod_perl environment
 
 0.04  Sun Dec 23 21:20:04 JST 2001
-	- Fixed docs
-	- pulled off Server subclass: it was completely broken
+    - Fixed docs
+    - pulled off Server subclass: it was completely broken
 
 0.03  Sat Dec 22 22:29:50 JST 2001
-	- Added test for multiple classes
-	* Added Request, Process, Server subclasses
+    - Added test for multiple classes
+    * Added Request, Process, Server subclasses
 
 0.02  Sat Dec 22 16:58:34 JST 2001
-	- use pnotes instead of register_cleanup
-	  (Thanks to Perrin Harkins <perrin@elem.com>)
+    - use pnotes instead of register_cleanup
+      (Thanks to Perrin Harkins <perrin@elem.com>)
 
 0.01  Thu Dec 20 12:45:29 2001
-	- original version; created by h2xs 1.19
+    - original version; created by h2xs 1.19
 
