@@ -114,7 +114,7 @@ Michael Schout E<lt>mschout@cpan.orgE<gt>
 Original idea by Matt Sergeant E<lt>matt@sergeant.orgE<gt> and Perrin
 Harkins E<lt>perrin@elem.comE<gt>.
 
-Initial implementation and versions 0.01 to 0.06 by Tatsuhiko Miyagawa
+Initial implementation and versions 0.01 to 0.07 by Tatsuhiko Miyagawa
 E<lt>miyagawa@bulknews.netE<gt>.
 
 =head1 COPYRIGHT & LICENSE
