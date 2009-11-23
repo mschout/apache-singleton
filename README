@@ -1,55 +1,36 @@
-NAME
-    Apache::Singleton - Singleton class for mod_perl
+Apache::Singleton is Copyright (C) 2009, Michael Schout.
 
-SYNOPSIS
-      package Printer;
-      # default:
-      #   Request for mod_perl env
-      #   Process for non-mod_perl env
-      use base qw(Apache::Singleton);
+WHAT IS THIS?
 
-      package Printer::PerRequest;
-      use base qw(Apache::Singleton::Request);
+Apache::Singleton works the same as Class::Singleton, but with various object
+lifetime (scope) under mod_perl or mod_perl2. See the Class::Singleton manpage
+first.
 
-      package Printer::PerProcess;
-      use base qw(Apache::Singleton::Process);
+INSTALLATION
 
-DESCRIPTION
-    Apache::Singleton works the same as Class::Singleton, but with various
-    object lifetime (scope). See the Class::Singleton manpage first.
+To install this module type the following:
 
-OBJECT LIFETIME
-    By inheriting one of the following sublasses of Apache::Singleton, you
-    can change the scope of your object.
+    perl Makefile.PL
+    make
+    make test
+    make install
 
-    Request
-          use base qw(Apache::Singleton::Request);
+DEPENDENCIES
 
-        One instance for one request. Apache::Singleton will remove instance
-        on each request. Implemented using mod_perl "pnotes" API. In
-        mod_perl environment (where $ENV{MOD_PERL} is defined), this is the
-        default scope, so inheriting from Apache::Singleton would do the
-        same effect.
+This module requires these other CPAN modules:
 
-    Process
-          use base qw(Apache::Singleton::Process);
+    Test::More 0.32 or later
+    mod_perl or mod_perl2
 
-        One instance for one httpd process. Implemented using package
-        global. In non-mod_perl environment, this is the default scope, and
-        you may notice this is the same beaviour with Class::Singleton ;)
+COPYRIGHT AND LICENCE
 
-        So you can use this module safely under non-mod_perl environment.
+   Copyright (C) 2009 Michael Schout.
 
-AUTHOR
-    Original idea by Matt Sergeant <matt@sergeant.org> and Perrin Harkins
-    <perrin@elem.com>.
+   This program is free software; you can redistribute it and/or modify it
+   under the terms of either:
 
-    Code by Tatsuhiko Miyagawa <miyagawa@bulknews.net>.
+   *   the GNU General Public License as published by the Free Software
+       Foundation; either version 1, or (at your option) any later
+       version, or
 
-    This library is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
-
-SEE ALSO
-    the Apache::Singleton::Request manpage, the Apache::Singleton::Process
-    manpage, the Class::Singleton manpage
-
+   *   the Artistic License version 2.0.
