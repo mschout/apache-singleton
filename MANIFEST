@@ -4,7 +4,6 @@ lib/Apache/Singleton/Process.pm
 lib/Apache/Singleton/Request.pm
 Makefile.PL
 MANIFEST
-META.yml			Module meta-data (added by MakeMaker)
 README
 t/00_compile.t
 t/01_singleton.t
