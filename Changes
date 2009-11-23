@@ -1,7 +1,7 @@
 Revision history for Perl extension Apache::Singleton.
 
-CURRENT
-    - new maintainer: Michael Schout <mschout@cpan.org>
+0.10  Sun Nov 22 2009
+  *** new maintainer: Michael Schout <mschout@cpan.org>
     - updated Makefile.PL
     - added META_MERGE to Makefile.PL
     - update so mod_perl2 2.0 >= RC5 is supported
