@@ -6,7 +6,7 @@ $VERSION = '0.07';
 
 BEGIN {
     my $delegator = sprintf 'Apache::Singleton::%s',
-	$ENV{MOD_PERL} ? 'Request' : 'Process';
+        $ENV{MOD_PERL} ? 'Request' : 'Process';
     eval qq{require $delegator};
     sub _delegator { $delegator }
 }
@@ -16,8 +16,8 @@ sub instance {
 
     my $instance = $class->_get_instance;
     unless (defined $instance) {
-	$instance = $class->_new_instance(@_);
-	$class->_set_instance($instance);
+        $instance = $class->_new_instance(@_);
+        $class->_set_instance($instance);
     }
     return $instance;
 }
@@ -93,15 +93,49 @@ So you can use this module safely under non-mod_perl environment.
 
 =back
 
+=head1 SOURCE
+
+You can contribute or fork this project via github:
+
+http://github.com/mschout/apache-singleton
+
+ git clone git://github.com/mschout/apache-singleton.git
+
+=head1 BUGS
+
+Please report any bugs or feature requests to
+bug-apache-singleton@rt.cpan.org, or through the web
+interface at http://rt.cpan.org/
+
 =head1 AUTHOR
+
+Michael Schout E<lt>mschout@cpan.orgE<gt>
 
 Original idea by Matt Sergeant E<lt>matt@sergeant.orgE<gt> and Perrin
 Harkins E<lt>perrin@elem.comE<gt>.
 
-Code by Tatsuhiko Miyagawa E<lt>miyagawa@bulknews.netE<gt>.
+Initial implementation and versions 0.01 to 0.06 by Tatsuhiko Miyagawa
+E<lt>miyagawa@bulknews.netE<gt>.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2009 Michael Schout.
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of either:
+
+=over 4
+
+=item *
+
+the GNU General Public License as published by the Free Software Foundation;
+either version 1, or (at your option) any later version, or
+
+=item *
+
+the Artistic License version 2.0.
+
+=back
 
 =head1 SEE ALSO
 
