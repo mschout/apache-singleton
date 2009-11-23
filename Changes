@@ -10,6 +10,7 @@ CURRENT
     - sign the dist, add signature test
     - check for mod_perl version in Makefile.PL.
         if mod_perl2, require >= 1.9922
+    - update README
 
 0.06  Tue Oct 19 17:29:05 JST 2004
     - removed dependency on Cache::Cache in Makefile.PL
