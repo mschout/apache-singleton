@@ -6,7 +6,7 @@ pm_to_blib
 
 # Apache::Test generated files
 t/TEST
-t/apache/
+t/apache/singleton/request.t
 t/conf/apache_test_config.pm
 t/conf/extra.conf
 t/conf/httpd.conf
