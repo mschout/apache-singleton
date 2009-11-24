@@ -1,5 +1,5 @@
 use strict;
-use lib qw(t/lib lib);
+use lib qw(t/mock lib);
 use Test::More tests => 4;
 use Mock::Apache;
 
