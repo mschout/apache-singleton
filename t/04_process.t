@@ -1,20 +1,16 @@
 use strict;
-use lib qw(t/mock lib);
+use lib qw(t/mock t/lib lib);
 use Test::More tests => 4;
 use Mock::Apache;
+use mod_perl;
+use Printer::PerProcess;
+use Printer::Device::PerProcess;
 
-package Printer;
-use base qw(Apache::Singleton::Process);
+my $printer_a = Printer::PerProcess->instance;
+my $printer_b = Printer::PerProcess->instance;
 
-package Printer::Device;
-use base qw(Apache::Singleton::Process);
-
-package main;
-my $printer_a = Printer->instance;
-my $printer_b = Printer->instance;
-
-my $printer_d1 = Printer::Device->instance;
-my $printer_d2 = Printer::Device->instance;
+my $printer_d1 = Printer::Device::PerProcess->instance;
+my $printer_d2 = Printer::Device::PerProcess->instance;
 
 is "$printer_a", "$printer_b", 'same printer';
 isnt "$printer_a", "$printer_d1", 'not same printer';
