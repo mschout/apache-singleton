@@ -1,8 +1,7 @@
 package Apache::Singleton;
 
 use strict;
-use vars qw($VERSION);
-$VERSION = '0.10';
+our $VERSION = '0.11';
 
 unless ($ENV{MOD_PERL}) {
     require Apache::Singleton::Process;
