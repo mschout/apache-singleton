@@ -4,11 +4,8 @@ use strict;
 use vars qw($VERSION);
 $VERSION = '0.10';
 
-BEGIN {
-    my $delegator = sprintf 'Apache::Singleton::%s',
-        $ENV{MOD_PERL} ? 'Request' : 'Process';
-    eval qq{require $delegator};
-    sub _delegator { $delegator }
+unless ($ENV{MOD_PERL}) {
+    require Apache::Singleton::Process;
 }
 
 sub instance {
@@ -29,14 +26,24 @@ sub _new_instance {
 # Abstract methods, but compatible default
 sub _get_instance {
     my $class = shift;
-    my $delegate = sprintf '%s::_get_instance', $class->_delegator;
-    $class->$delegate(@_);
+
+    if ($ENV{MOD_PERL}) {
+        $class->Apache::Singleton::Request::_get_instance(@_);
+    }
+    else {
+        $class->Apache::Singleton::Process::_get_instance(@_);
+    }
 }
 
 sub _set_instance {
     my $class = shift;
-    my $delegate = sprintf '%s::_set_instance', $class->_delegator;
-    $class->$delegate(@_);
+
+    if ($ENV{MOD_PERL}) {
+        $class->Apache::Singleton::Request::_set_instance(@_);
+    }
+    else {
+        $class->Apache::Singleton::Process::_set_instance(@_);
+    }
 }
 
 1;
