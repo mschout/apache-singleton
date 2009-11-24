@@ -1,11 +1,9 @@
 package Apache::Singleton::Process;
 
 use strict;
-use vars qw($VERSION);
-$VERSION = '0.01';
+use base 'Apache::Singleton';
 
-use Apache::Singleton;
-use base qw(Apache::Singleton);
+our $VERSION = '0.01';
 
 no strict 'refs';
 
