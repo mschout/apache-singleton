@@ -3,3 +3,14 @@ Makefile.old
 blib
 pm_to_blib
 *.bak
+
+# Apache::Test generated files
+t/TEST
+t/apache/
+t/conf/apache_test_config.pm
+t/conf/extra.conf
+t/conf/httpd.conf
+t/conf/modperl_inc.pl
+t/conf/modperl_startup.pl
+t/htdocs/
+t/logs/

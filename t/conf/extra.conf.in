@@ -1,0 +1,11 @@
+<IfDefine APACHE2>
+    PerlOptions +GlobalRequest
+    # needed so $mod_perl::VERSION is available
+    PerlModule mod_perl2
+</IfDefine>
+<IfDefine APACHE1>
+    # needed so $mod_perl::VERSION is available
+    PerlModule mod_perl
+</IfDefine>
+
+# vim: ft=apache
