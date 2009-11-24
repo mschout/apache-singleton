@@ -1,11 +1,9 @@
 package Apache::Singleton::Request;
 
 use strict;
-use vars qw($VERSION);
-$VERSION = '0.06';
+use base 'Apache::Singleton';
 
-use Apache::Singleton;
-use base qw(Apache::Singleton);
+our $VERSION = '0.06';
 
 BEGIN { 
     use constant MP2 => $mod_perl::VERSION >= 1.99 ? 1 : 0;
