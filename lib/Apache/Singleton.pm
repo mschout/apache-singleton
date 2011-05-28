@@ -20,7 +20,11 @@ sub instance {
 }
 
 sub _new_instance {
-    bless {}, shift;
+    my $class = shift;
+
+    my %args = (@_ && ref $_[0] eq 'HASH') ? %{ $_[0] } : @_;
+
+    bless { %args }, $class;
 }
 
 # Abstract methods, but compatible default

@@ -2,6 +2,7 @@ Revision history for Perl extension Apache::Singleton.
 
 {{$NEXT}}
     - Use Dist::Zilla for distribution building
+    - Copy args passed to instance() to constructor
 
 0.11  Tue Nov 24 2009
     - added real test suite using Apache::Test
