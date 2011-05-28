@@ -1,9 +1,9 @@
 package Apache::Singleton::Process;
 
+# ABSTRACT: One instance per One Process
+
 use strict;
 use base 'Apache::Singleton';
-
-our $VERSION = '0.01';
 
 no strict 'refs';
 
@@ -20,11 +20,8 @@ sub _set_instance {
 }
 
 1;
+
 __END__
-
-=head1 NAME
-
-Apache::Singleton::Process - One instance per One Process
 
 =head1 SYNOPSIS
 

@@ -1,11 +1,11 @@
 package Apache::Singleton::Request;
 
+# ABSTRACT: One instance per One Request
+
 use strict;
 use base 'Apache::Singleton';
 
-our $VERSION = '0.06';
-
-BEGIN { 
+BEGIN {
     use constant MP2 => $mod_perl::VERSION >= 1.99 ? 1 : 0;
 
     if (MP2) {
@@ -31,11 +31,8 @@ sub _set_instance {
 }
 
 1;
+
 __END__
-
-=head1 NAME
-
-Apache::Singleton::Request - One instance per One Request
 
 =head1 SYNOPSIS
 
