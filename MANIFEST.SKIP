@@ -22,6 +22,7 @@
 
 # Apache::Test generated files
 ^t/TEST$
+^t/SMOKE$
 ^t/conf/apache_test_config.pm$
 ^t/conf/extra.conf$
 ^t/conf/httpd.conf$
