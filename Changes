@@ -1,6 +1,7 @@
 Revision history for Perl extension Apache::Singleton.
 
 {{$NEXT}}
+    - No changes. Rebuild tarball in WinZip compatible way.
 
 0.12  2011-05-28
     - Use Dist::Zilla for distribution building
