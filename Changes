@@ -1,5 +1,8 @@
 Revision history for Perl extension Apache::Singleton.
 
+0.13  2011-05-29
+    - No changes. Rebuild tarball in WinZip compatible way.
+
 0.12  2011-05-28
     - Use Dist::Zilla for distribution building
     - Copy args passed to instance() to constructor

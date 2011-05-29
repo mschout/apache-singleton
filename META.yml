@@ -15,7 +15,7 @@ build_requires:
   mod_perl: 0
   mod_perl2: 0
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.102400'
+generated_by: 'Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.102400'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -31,4 +31,4 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Apache-Singleton
   homepage: http://search.cpan.org/dist/Apache-Singleton/
   repository: git://github.com/mschout/apache-singleton.git
-version: 0.12
+version: 0.13

@@ -14,17 +14,17 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 1935312b71e587165929b3e87896bdb43803c8f1 Changes
+SHA1 bc2a70252f6995a71aa53e26dd11879e0874937b Changes
 SHA1 d5e967dfbbc82826f511d98e3301b73ad959494d LICENSE
 SHA1 348cb528bb204374cc79b0696b3e5bdf1758bd0c MANIFEST
 SHA1 87b1d300b3178578f717092bf1e80f13b6cdc294 MANIFEST.SKIP
-SHA1 cb6e1f8478b12d99c2fd76fa878979a2aaad5572 META.yml
+SHA1 cd52c3b2632294ef7a5a7e34e0deea42f45fcb1d META.yml
 SHA1 81e5d114ad5d8ffc0dac0e70aa05675315aaf0cd Makefile.PL
 SHA1 0f8939d79505ac256542824b3a5aacd70adc440b README
 SHA1 934cf0223f3cbb9f404fd4d5ee837f9b195a5356 dist.ini
-SHA1 ccf1697cbba0411e15f346f45ab1af79ad0b4c6a lib/Apache/Singleton.pm
-SHA1 32ec34f5a4f6d5528f2dd41ea6cf83d537c43dfa lib/Apache/Singleton/Process.pm
-SHA1 0782f08cd5251aea07c6d280a43a75f62312d449 lib/Apache/Singleton/Request.pm
+SHA1 ac1ab08bd751607ef9b4ec04b93f640aa6af7231 lib/Apache/Singleton.pm
+SHA1 649876ed3318a8723b6c8ae9b996a6a8287aab84 lib/Apache/Singleton/Process.pm
+SHA1 9fe1a77923f2e4c7e3f73f3cfab94c2b3c9c0094 lib/Apache/Singleton/Request.pm
 SHA1 ae6746c529ae00390016998223e17e046c0bf402 t/TEST.PL
 SHA1 6a442ecd0fe896777fc6a9c15bcc77f58c6af0a6 t/apache/singleton/process/printer_instance.t
 SHA1 0125edfa8087ea24461c5a398ab50713b57969d0 t/apache/singleton/request/printer_instance.t
@@ -53,7 +53,7 @@ SHA1 734b6548a02d5c2a810c0f89aae0bdef7fca8339 t/singleton.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iEYEARECAAYFAk3hXfwACgkQ+CqvSzp9LOxSawCffBGn4KxvNVxqeWfuY3QqCqqi
-nqsAoLzDdjs+A756uvUEIpsHyOgw0/dA
-=J6xY
+iEYEARECAAYFAk3inzIACgkQ+CqvSzp9LOzvqACcDHQe8Qc5I8cMm0Dry4iKciJw
+kcoAn3of31IAx5chuA4ArXNNAGamwwYt
+=z3fu
 -----END PGP SIGNATURE-----
