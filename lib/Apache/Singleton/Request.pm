@@ -36,6 +36,10 @@ __END__
 
 =head1 SYNOPSIS
 
+  # in httpd.conf
+  PerlOptions +GlobalRequest
+
+  # in your module (e.g.: Printer.pm)
   package Printer;
   use base qw(Apache::Singleton::Request);
 

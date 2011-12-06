@@ -1,6 +1,9 @@
 Revision history for Perl extension Apache::Singleton.
 
 {{$NEXT}}
+    - load Apache::Singleton::Request if necessary [RT 71218]
+    - note that PerlOptions +GlobalRequest is required for
+      Apache::Singleton::Request
 
 0.13  2011-05-29
     - No changes. Rebuild tarball in WinZip compatible way.
