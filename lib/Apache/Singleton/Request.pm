@@ -1,6 +1,6 @@
 package Apache::Singleton::Request;
-BEGIN {
-  $Apache::Singleton::Request::VERSION = '0.13';
+{
+  $Apache::Singleton::Request::VERSION = '0.14';
 }
 
 # ABSTRACT: One instance per One Request
@@ -45,10 +45,14 @@ Apache::Singleton::Request - One instance per One Request
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 SYNOPSIS
 
+  # in httpd.conf
+  PerlOptions +GlobalRequest
+
+  # in your module (e.g.: Printer.pm)
   package Printer;
   use base qw(Apache::Singleton::Request);
 

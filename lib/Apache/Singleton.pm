@@ -1,13 +1,17 @@
 package Apache::Singleton;
-BEGIN {
-  $Apache::Singleton::VERSION = '0.13';
+{
+  $Apache::Singleton::VERSION = '0.14';
 }
 
 # ABSTRACT: Singleton class for mod_perl
 
 use strict;
 
-unless ($ENV{MOD_PERL}) {
+# load appropriate subclass
+if ($ENV{MOD_PERL}) {
+    require Apache::Singleton::Request;
+}
+else {
     require Apache::Singleton::Process;
 }
 
@@ -64,7 +68,7 @@ Apache::Singleton - Singleton class for mod_perl
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 SYNOPSIS
 
@@ -100,6 +104,9 @@ One instance for one request. Apache::Singleton will remove instance
 on each request. Implemented using mod_perl C<pnotes> API. In mod_perl
 environment (where C<$ENV{MOD_PERL}> is defined), this is the default
 scope, so inheriting from Apache::Singleton would do the same effect.
+
+B<NOTE>: You need C<PerlOptions +GlobalRequest> in your apache
+configuration in order to use the I<Request> lifetime method.
 
 =item Process
 

@@ -1,6 +1,6 @@
 package Apache::Singleton::Process;
-BEGIN {
-  $Apache::Singleton::Process::VERSION = '0.13';
+{
+  $Apache::Singleton::Process::VERSION = '0.14';
 }
 
 # ABSTRACT: One instance per One Process
@@ -34,7 +34,7 @@ Apache::Singleton::Process - One instance per One Process
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 SYNOPSIS
 

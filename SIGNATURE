@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.64.
+signed via the Module::Signature module, version 0.68.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,17 +14,17 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 bc2a70252f6995a71aa53e26dd11879e0874937b Changes
-SHA1 d5e967dfbbc82826f511d98e3301b73ad959494d LICENSE
+SHA1 dde66034575feb0dd9a155fa75294dad5c6d66ef Changes
+SHA1 752fcdf57b08955f67e825d9a2a3b935c5739cd7 LICENSE
 SHA1 348cb528bb204374cc79b0696b3e5bdf1758bd0c MANIFEST
 SHA1 87b1d300b3178578f717092bf1e80f13b6cdc294 MANIFEST.SKIP
-SHA1 cd52c3b2632294ef7a5a7e34e0deea42f45fcb1d META.yml
+SHA1 9da3f528e9fe4474eb987ebd5846d89cb88029d2 META.yml
 SHA1 81e5d114ad5d8ffc0dac0e70aa05675315aaf0cd Makefile.PL
 SHA1 0f8939d79505ac256542824b3a5aacd70adc440b README
-SHA1 934cf0223f3cbb9f404fd4d5ee837f9b195a5356 dist.ini
-SHA1 ac1ab08bd751607ef9b4ec04b93f640aa6af7231 lib/Apache/Singleton.pm
-SHA1 649876ed3318a8723b6c8ae9b996a6a8287aab84 lib/Apache/Singleton/Process.pm
-SHA1 9fe1a77923f2e4c7e3f73f3cfab94c2b3c9c0094 lib/Apache/Singleton/Request.pm
+SHA1 1ebd2fc3c311ad7aa1cdd7d111d641f888e04faa dist.ini
+SHA1 c4fd4ba95aec1eb8d5a9023db4a0b0a6f4a5b4c2 lib/Apache/Singleton.pm
+SHA1 92c432cd9b76a6bd057a09e6bb5f1fd2a9856e97 lib/Apache/Singleton/Process.pm
+SHA1 aa67cdc3261f3f6d24900ab942be300c23ecae16 lib/Apache/Singleton/Request.pm
 SHA1 ae6746c529ae00390016998223e17e046c0bf402 t/TEST.PL
 SHA1 6a442ecd0fe896777fc6a9c15bcc77f58c6af0a6 t/apache/singleton/process/printer_instance.t
 SHA1 0125edfa8087ea24461c5a398ab50713b57969d0 t/apache/singleton/request/printer_instance.t
@@ -53,7 +53,7 @@ SHA1 734b6548a02d5c2a810c0f89aae0bdef7fca8339 t/singleton.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iEYEARECAAYFAk3inzIACgkQ+CqvSzp9LOzvqACcDHQe8Qc5I8cMm0Dry4iKciJw
-kcoAn3of31IAx5chuA4ArXNNAGamwwYt
-=z3fu
+iEYEARECAAYFAk7eTvIACgkQ+CqvSzp9LOwv7gCglY1FJkXHHqa9UPTy7+MsOkwK
+8aUAnRI4FXuvkEeBmZVRjD1B/ONonYAq
+=AREc
 -----END PGP SIGNATURE-----
