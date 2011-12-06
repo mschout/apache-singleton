@@ -1,6 +1,8 @@
 Revision history for Perl extension Apache::Singleton.
 
 {{$NEXT}}
+
+0.14  2011-12-06
     - load Apache::Singleton::Request if necessary [RT 71218]
     - note that PerlOptions +GlobalRequest is required for
       Apache::Singleton::Request
