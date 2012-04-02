@@ -1,6 +1,6 @@
 package Apache::Singleton::Request;
-{
-  $Apache::Singleton::Request::VERSION = '0.14';
+BEGIN {
+  $Apache::Singleton::Request::VERSION = '0.15';
 }
 
 # ABSTRACT: One instance per One Request
@@ -45,7 +45,7 @@ Apache::Singleton::Request - One instance per One Request
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package Apache::Singleton;
-{
-  $Apache::Singleton::VERSION = '0.14';
+BEGIN {
+  $Apache::Singleton::VERSION = '0.15';
 }
 
 # ABSTRACT: Singleton class for mod_perl
@@ -68,7 +68,7 @@ Apache::Singleton - Singleton class for mod_perl
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 SYNOPSIS
 
