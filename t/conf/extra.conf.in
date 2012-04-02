@@ -8,4 +8,8 @@
     PerlModule mod_perl
 </IfDefine>
 
+# RT #76244
+# printer_instance.t expects the same apache to handle each request.
+MaxClients 1
+
 # vim: ft=apache
