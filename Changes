@@ -1,6 +1,8 @@
 Revision history for Perl extension Apache::Singleton.
 
 {{$NEXT}}
+
+0.15  2012-04-02
     - fixed test: limit MaxClient to 1. process/printer_instance.t expects the
       same apache to handle each request. [RT 76244]
 
