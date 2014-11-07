@@ -1,8 +1,5 @@
 package Apache::Singleton::Request;
-BEGIN {
-  $Apache::Singleton::Request::VERSION = '0.15';
-}
-
+$Apache::Singleton::Request::VERSION = '0.16';
 # ABSTRACT: One instance per One Request
 
 use strict;
@@ -35,7 +32,7 @@ sub _set_instance {
 
 1;
 
-
+__END__
 
 =pod
 
@@ -45,7 +42,7 @@ Apache::Singleton::Request - One instance per One Request
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 
@@ -86,7 +83,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-

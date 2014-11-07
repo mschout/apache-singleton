@@ -1,8 +1,5 @@
 package Apache::Singleton;
-BEGIN {
-  $Apache::Singleton::VERSION = '0.15';
-}
-
+$Apache::Singleton::VERSION = '0.16';
 # ABSTRACT: Singleton class for mod_perl
 
 use strict;
@@ -59,6 +56,7 @@ sub _set_instance {
 
 1;
 
+__END__
 
 =pod
 
@@ -68,7 +66,7 @@ Apache::Singleton - Singleton class for mod_perl
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 
@@ -155,7 +153,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-

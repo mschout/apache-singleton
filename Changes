@@ -1,5 +1,10 @@
 Revision history for Perl extension Apache::Singleton.
 
+0.16  2014-11-07
+    - fix signature test due to MYMETA.* in new EU::MM
+    - Work around global destruction order issue by integrating on proposed
+      patch to Class::Singleton [#68534] (Thanks Steve Hay!)
+
 0.15  2012-04-02
     - fixed test: limit MaxClient to 1. process/printer_instance.t expects the
       same apache to handle each request. [RT 76244]
