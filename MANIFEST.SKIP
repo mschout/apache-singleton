@@ -33,3 +33,4 @@
 
 # Apache::Test generated tests
 ^t/apache/singleton/request.t$
+^MYMETA\.
