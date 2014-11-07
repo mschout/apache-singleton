@@ -7,16 +7,27 @@ use base 'Apache::Singleton';
 
 no strict 'refs';
 
+my %INSTANCES;
+
 sub _get_instance {
     my $class = shift;
-    my $global = "$class\::_instance";
-    return $$global;
+
+    $class = ref $class || $class;
+
+    return $INSTANCES{$class};
 }
 
 sub _set_instance {
     my($class, $instance) = @_;
-    my $global = "$class\::_instance";
-    $$global = $instance;
+
+    $class = ref $class || $class;
+
+    $INSTANCES{$class} = $instance;
+}
+
+END {
+    # dereferences and causes orderly destruction of all instances
+    undef(%INSTANCES);
 }
 
 1;
