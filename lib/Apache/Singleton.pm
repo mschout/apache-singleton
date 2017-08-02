@@ -3,6 +3,7 @@ package Apache::Singleton;
 # ABSTRACT: Singleton class for mod_perl
 
 use strict;
+use warnings;
 
 # load appropriate subclass
 if ($ENV{MOD_PERL}) {

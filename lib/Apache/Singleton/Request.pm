@@ -3,6 +3,8 @@ package Apache::Singleton::Request;
 # ABSTRACT: One instance per One Request
 
 use strict;
+use warnings;
+
 use base 'Apache::Singleton';
 
 BEGIN {

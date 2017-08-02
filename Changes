@@ -1,6 +1,7 @@
 Revision history for Perl extension Apache::Singleton.
 
 {{$NEXT}}
+    - Kwalitee: include META.json, declare minimum perl version, enable warnings
 
 0.16  2014-11-07
     - fix signature test due to MYMETA.* in new EU::MM

@@ -3,6 +3,8 @@ package Apache::Singleton::Process;
 # ABSTRACT: One instance per One Process
 
 use strict;
+use warnings;
+
 use base 'Apache::Singleton';
 
 no strict 'refs';
