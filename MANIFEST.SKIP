@@ -35,4 +35,4 @@
 ^t/apache/singleton/request.t$
 ^MYMETA\.
 ^\.travis.yml$
-^\.dist.ini$
+^dist.ini$
