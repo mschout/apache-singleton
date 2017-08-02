@@ -1,3 +1,5 @@
+# COPYRIGHT
+
 package Apache::Singleton;
 
 # ABSTRACT: Singleton class for mod_perl

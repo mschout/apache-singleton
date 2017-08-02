@@ -1,3 +1,5 @@
+# COPYRIGHT
+
 package Apache::Singleton::Process;
 
 # ABSTRACT: One instance per One Process

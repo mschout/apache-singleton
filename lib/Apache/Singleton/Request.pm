@@ -1,3 +1,5 @@
+# COPYRIGHT
+
 package Apache::Singleton::Request;
 
 # ABSTRACT: One instance per One Request
